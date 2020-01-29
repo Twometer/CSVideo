@@ -28,6 +28,8 @@ namespace CSVideo.Writer
 
         public int AudioSamplesPerFrame => audioStream.tempFrame->nb_samples * Channels;
 
+        public bool WriteVideo => av_compare_ts(videoStream.nextPts, videoStream.enc->time_base, audioStream.nextPts, audioStream.enc->time_base) <= 0;
+
         private OutputStream videoStream;
         private OutputStream audioStream;
 
