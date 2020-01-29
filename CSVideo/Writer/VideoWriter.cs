@@ -80,7 +80,7 @@ namespace CSVideo.Writer
             if (hasAudio)
                 OpenAudio();
 
-            av_dump_format(ctx, 0, Filename, 1);
+            // av_dump_format(ctx, 0, Filename, 1);
 
             ret = avio_open(&ctx->pb, Filename, AVIO_FLAG_WRITE);
             if (ret < 0)

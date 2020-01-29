@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,9 +23,13 @@ namespace CSVideo
 
         public static bool Load(string libraryLocation)
         {
+            var dir = new DirectoryInfo(libraryLocation);
+            if (!dir.Exists)
+                return false;
+
             try
             {
-                ffmpeg.RootPath = libraryLocation;
+                ffmpeg.RootPath = dir.FullName;
                 ffmpeg.av_version_info();
                 IsLoaded = true;
                 return true;
