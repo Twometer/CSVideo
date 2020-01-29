@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>CSVideo</id>
+    <version>1.0.0</version>
+    <title>CSVideo</title>
+    <authors>Twometer</authors>
+    <owners>Twometer</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">Apache-2.0</license>
+    <projectUrl>https://github.com/Twometer/CSVideo</projectUrl>
+    <description>C# Library for writing video files using FFmpeg with audio support</description>
+    <releaseNotes>Initial release</releaseNotes>
+    <copyright>Copyright © 2020 Twometer</copyright>
+    <tags>ffmpeg video-writer video-processing encoding ffmpeg-wrapper</tags>
+	<dependencies>
+		<dependency id="FFmpeg.AutoGen" version="4.2.0"/>
+	</dependencies>
+  </metadata>
+</package>

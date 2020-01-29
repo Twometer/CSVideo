@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("CSVideo")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("C# Library for writing video files using FFmpeg with audio support")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Twometer Applications")]
 [assembly: AssemblyProduct("CSVideo")]
-[assembly: AssemblyCopyright("Copyright ©  2020")]
+[assembly: AssemblyCopyright("Copyright © 2020 Twometer")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

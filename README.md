@@ -1,4 +1,6 @@
 # CSVideo
+![](https://img.shields.io/nuget/v/CSVideo)
+
 CSVideo is a C# Library for writing video files using FFmpeg.
 
 I was searching for a good C# video writing library for a long time, and the only one
@@ -15,7 +17,7 @@ default configuration for this library outputs high-quality audio and video in 1
 you can also change the configuration to your liking, if you want something more special.
 
 ## Usage
-To use this library, you need the FFmpeg library files. I tested it with the libraries supplied by FFmpeg.Autogen (v4.2),
+To use this library, you need the FFmpeg library files. I tested it with the libraries supplied by FFmpeg.AutoGen (v4.2),
 which you can download from [here](https://github.com/Ruslan-B/FFmpeg.AutoGen/tree/master/FFmpeg/bin/x64), but you can
 also try the latest version from the FFmpeg site. Once you have these libraries, you can use CSVideo as follows:
 
@@ -49,7 +51,7 @@ for mono streams you have to set `writer.Channels = 1`. It only supports mono an
 channels will lead to an exception
 
 ## Credits
-Thanks to (FFmpeg.Autogen by Ruslan-B)[https://github.com/Ruslan-B/FFmpeg.AutoGen] for the very nice C# FFmpeg wrapper
+Thanks to (FFmpeg.AutoGen by Ruslan-B)[https://github.com/Ruslan-B/FFmpeg.AutoGen] for the very nice C# FFmpeg wrapper
 
 ## Contributing
 You can help me make CSVideo the go-to solution for video manipulation in C# by reporting bugs
