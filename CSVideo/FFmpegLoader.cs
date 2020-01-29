@@ -9,6 +9,15 @@ namespace CSVideo
 {
     public class FFmpegLoader
     {
+        public static string FFmpegVersion
+        {
+            get
+            {
+                EnsureLoaded();
+                return ffmpeg.av_version_info();
+            }
+        }
+
         private static bool IsLoaded { get; set; } = false;
 
         public static bool Load(string libraryLocation)
