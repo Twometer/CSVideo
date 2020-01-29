@@ -1,5 +1,5 @@
 # CSVideo
-[![](https://img.shields.io/nuget/v/CSVideo)](https://www.nuget.org/packages/CSVideo)
+[![](https://img.shields.io/nuget/v/CSVideo)](https://www.nuget.org/packages/CSVideo) ![](https://img.shields.io/github/license/Twometer/CSVideo)
 
 CSVideo is a C# Library for writing video files using FFmpeg.
 
