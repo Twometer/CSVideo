@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>CSVideo</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>CSVideo</title>
     <authors>Twometer</authors>
     <owners>Twometer</owners>
@@ -10,7 +10,7 @@
     <license type="expression">Apache-2.0</license>
     <projectUrl>https://github.com/Twometer/CSVideo</projectUrl>
     <description>C# Library for writing video files using FFmpeg with audio support</description>
-    <releaseNotes>Initial release</releaseNotes>
+    <releaseNotes>Fix a critical bug that always writes the same frame</releaseNotes>
     <copyright>Copyright © 2020 Twometer</copyright>
     <tags>ffmpeg video-writer video-processing encoding ffmpeg-wrapper</tags>
 	<dependencies>
