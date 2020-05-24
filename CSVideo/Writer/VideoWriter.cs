@@ -404,12 +404,12 @@ namespace CSVideo.Writer
                 videoStream.swsCtx = sws_getContext(c->width, c->height, AVPixelFormat.AV_PIX_FMT_BGR24, c->width, c->height, c->pix_fmt, SWS_BICUBIC, null, null, null);
                 if (videoStream.swsCtx == null)
                     throw new FFmpegException("Could not initialize conversion context");
-
-                var ost = videoStream;
-
-                ExtractBitmapData(ost.tempFrame, bitmap);
-                sws_scale(ost.swsCtx, ost.tempFrame->data, ost.tempFrame->linesize, 0, c->height, ost.frame->data, ost.frame->linesize);
             }
+            var ost = videoStream;
+
+            ExtractBitmapData(ost.tempFrame, bitmap);
+            sws_scale(ost.swsCtx, ost.tempFrame->data, ost.tempFrame->linesize, 0, c->height, ost.frame->data, ost.frame->linesize);
+
             videoStream.frame->pts = videoStream.nextPts++;
             return videoStream.frame;
         }
