@@ -414,17 +414,21 @@ namespace CSVideo.Writer
             return videoStream.frame;
         }
 
+        private byte[] bitmapRawData;
+
         private void ExtractBitmapData(AVFrame* frame, Bitmap bitmap)
         {
             var bitmapData = bitmap.LockBits(new Rectangle(Point.Empty, bitmap.Size), ImageLockMode.ReadOnly, PixelFormat.Format24bppRgb);
             try
             {
-                byte[] data = new byte[bitmapData.Stride * bitmapData.Height];
-                Marshal.Copy(bitmapData.Scan0, data, 0, data.Length);
-                fixed (byte* pData = data)
+                if (bitmapRawData == null)
+                    bitmapRawData = new byte[bitmapData.Stride * bitmapData.Height];
+
+                Marshal.Copy(bitmapData.Scan0, bitmapRawData, 0, bitmapRawData.Length);
+                fixed (byte* pData = bitmapRawData)
                 {
                     frame->data[0] = pData;
-                    frame->linesize[0] = data.Length / bitmap.Height;
+                    frame->linesize[0] = bitmapData.Stride;
                 }
             }
             finally
